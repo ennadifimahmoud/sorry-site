@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+<meta charset="UTF-8">
+<title>Will you forgive me?</title>
+
+<style>
+body {
+    font-family: Arial;
+    text-align: center;
+    background-color: #ffe6f0;
+    margin-top: 100px;
+}
+
+h1 {
+    color: #ff3366;
+}
+
+.buttons {
+    margin-top: 20px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 18px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.yes {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.no {
+    background-color: #ff3333;
+    color: white;
+    position: absolute;
+}
+</style>
+</head>
+
+<body>
+
+<h1>Wash tsam7ini? ??</h1>
+
+<div class="buttons">
+    <button class="yes" onclick="yesClicked()">Yes</button>
+    <button class="no" onmouseover="moveButton()" id="noBtn">No</button>
+</div>
+
+<h2 id="message"></h2>
+
+<script>
+function yesClicked() {
+    document.getElementById("message").innerHTML = "Thank you ?? nti ahsan wa7da ??";
+}
+
+function moveButton() {
+    var button = document.getElementById("noBtn");
+
+    var x = Math.random() * window.innerWidth;
+    var y = Math.random() * window.innerHeight;
+
+    button.style.left = x + "px";
+    button.style.top = y + "px";
+}
+</script>
+
+</body>
+</html>
